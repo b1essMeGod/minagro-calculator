@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="openModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title inter-text-BIG">Посчитай выгоду вместе с МинАгро!</div>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-calculate">
+                        <div class="primal-info ">
+                            <div class="name-info inter-text">Площадь земли (га):</div>
+                            <div class="quantity-block">
+                                <input class="quantity-num" id="S_inp" type="number" placeholder="Площадь" value="" />
+                            </div>
+                            <div class="name-info inter-text">Урожайность (ц/га):</div>
+                            <div class="quantity-block">
+                                <input class="quantity-num" id="U_inp" type="number" placeholder="Урожайность"
+                                    value="" />
+                            </div>
+                            <div class="name-info inter-text">Цена на зерно (₽/т):</div>
+                            <div class="quantity-block">
+                                <input class="quantity-num" id="C_inp" type="number" placeholder="Цена на зерно"
+                                    value="" />
+                            </div>
+                        </div>
+                        <div class="result">
+                            <div class="name-info inter-text">Доход (₽):</div>
+                            <div class="quantity-block">
+                                <input class="quantity-num" id="D_out" type="number" readonly="readonly"
+                                    placeholder="Ваш доход:" value="" />
+                            </div>
+                            <div class="name-info inter-text">Прибыль (₽):</div>
+                            <div class="quantity-block">
+                                <input class="quantity-num" id="P_out" type="number" readonly="readonly"
+                                    placeholder="Ваша прибыль:" value="" />
+                            </div>
+                            <div class="name-info inter-text">Доход с гектара (₽):</div>
+                            <div class="quantity-block">
+                                <input class="quantity-num" id="G_out" type="number" readonly="readonly"
+                                    placeholder="Ваш доход с гектара:" value="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="footer-left">
+                            <img class="footer-img" src="img/kanistra.png">
+                        </div>
+                        <div class="footer-right">
+                            <div class="footer-head inter-text-BIG">МЕГАВИТ - Некорневая подкормка</div>
+                            <div class="footer-calculate">
+                                <div class="liters">
+                                    <div class="name-info inter-text">Литры:</div>
+                                    <div class="quantity-block">
+                                        <input class="quantity-num-mini" id="L_out" type="number" readonly="readonly"
+                                            placeholder="Необходимо литров:" value="" />
+                                    </div>
+                                </div>
+                                <div class="sum">
+                                    <div class="name-info inter-text">Сумма:</div>
+                                    <div class="quantity-block">
+                                        <input class="quantity-num-mini" id="Summ_out" type="number" readonly="readonly"
+                                            placeholder="Необходимо бюджета:" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-description inter-mini">*По результатам полевых испытаний удобрений</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#openModal">Посчитай выгоду вместе с МинАгро!</a>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="calc.js"></script>
+</body>
+
+</html>
